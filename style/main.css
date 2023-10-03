@@ -10,6 +10,7 @@ body
     width: 95%;
     height: 95%;
     border: 3px solid black;
+    position: relative;
 }
 
 #zone_principale > .carte
@@ -76,6 +77,20 @@ body
     left: 100%;
     top: 50%;
     transform: translate(0%, -50%);
+}
+
+.ligne.haut
+{
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+}
+
+.ligne.haut > .destination
+{
+    position: absolute;
+    bottom: 100%;
+    transform: translate(-50%, 0);
 }
 
 .ligne.bas
