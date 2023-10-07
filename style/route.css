@@ -1,0 +1,23 @@
+.route.verticale
+{
+    height: 479px;
+    width: 209px;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(15, 30px);
+    gap: 2px;
+}
+
+.route.haut
+{
+    position: absolute;
+    bottom: 100%;
+}
+
+.route.haut > .destination
+{
+    position: absolute;
+    bottom: 100%;
+    transform: translate(-50%, 0);
+}

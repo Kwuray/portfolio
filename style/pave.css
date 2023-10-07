@@ -1,0 +1,28 @@
+.ligne_pave_5
+{
+    display: grid;
+    grid-template-columns: 55px 30px 40px 50px 25px;
+    gap: 2px;
+}
+
+.ligne_pave_6
+{
+    display: grid;
+    grid-template-columns: 43px 23px 28px 40px 26px 38px;
+    gap: 2px;
+}
+
+.ligne_pave_7
+{
+    display: grid;
+    grid-template-columns: 22px 32px 20px 28px 36px 24px 34px;
+    gap: 2px;
+}
+
+.pave_route
+{
+    height: 30px;
+    background-color: rgb(235, 161, 104);
+    border: 0.5px solid rgb(208,153,91, 0.2);
+    border-radius: 8% 9% 7% 10%;
+}

@@ -1,0 +1,13 @@
+.herbe
+{
+    box-shadow: 30px 5px 0 0 rgba(0,113,63,1), 10px 10px 0 0 rgba(0,113,63,1), 25px 10px 0 0 rgb(0, 113, 63), 15px 15px 0 0 rgba(0,113,63,1), 25px 15px 0 0 rgba(0,113,63,1), 35px 15px 0 0 rgba(112,185,49,1), 5px 20px 0 0 rgba(112,185,49,1), 15px 20px 0 0 rgba(0,113,63,1), 25px 20px 0 0 rgba(112,185,49,1), 30px 20px 0 0 rgba(112,185,49,1), 10px 25px 0 0 rgba(112,185,49,1), 15px 25px 0 0 rgba(112,185,49,1);
+    height: 5px;
+    width: 5px;
+}
+
+.fleur
+{
+    box-shadow: 10px 5px 0 0 rgba(255, 255, 255, 1), 5px 10px 0 0 rgba(255, 255, 255, 1), 10px 10px 0 0 rgba(254,239,0,1), 15px 10px 0 0 rgba(255, 255, 255, 1), 5px 15px 0 0 rgba(0,0,0,0.3), 10px 15px 0 0 rgba(255, 255, 255, 1), 15px 15px 0 0 rgba(0,0,0,0.3), 10px 20px 0 0 rgba(0,0,0,0.3);
+    height: 5px;
+    width: 5px;
+}

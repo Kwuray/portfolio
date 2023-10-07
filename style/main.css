@@ -12,14 +12,15 @@ body
     width: 100%;
 }
 
-#zone_principale
+#decor
 {
     width: 100%;
     height: 2000px;
     position: relative;
+    background-color: rgba(126, 204, 40);
 }
 
-#zone_principale > .carte
+#decor > .carte
 {
     position: absolute;
     left: 50%;
@@ -30,7 +31,7 @@ body
 .carte
 {
     height: 300px;
-    width: 200px;
+    width: 400px;
     border: 2px solid black;
 }
 
@@ -40,154 +41,76 @@ body
     width: 150px;
     border: 2px solid black;
 }
-
-.ligne.horizontale
-{
-    border-top: 1px solid black;
-    height: 1px;
-    width: 500px;
-}
-
-.ligne.verticale
-{
-    border-left: 1px solid black;
-    height: 500px;
-    width: 1px;
-}
-
-.ligne.gauche
-{
-    position: absolute;
-    right: 100%;
-    top: 50%;
-}
-
-.ligne.gauche > .destination
-{
-    position: absolute;
-    right: 100%;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.ligne.droite
-{
-    position: absolute;
-    left: 100%;
-    top: 50%;
-}
-
-.ligne.droite > .destination
-{
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.ligne.haut
-{
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-}
-
-.ligne.haut > .destination
-{
-    position: absolute;
-    bottom: 100%;
-    transform: translate(-50%, 0);
-}
-
-.ligne.bas
-{
-    position: absolute;
-    left: 50%;
-    top: 100%;
-}
-
-.ligne.bas > .destination
-{
-    position: absolute;
-    top: 100%;
-    transform: translate(-50%, 0);
-}
-
 /*
-.ligne.horizontale
+.route.horizontale
 {
     border-top: 1px solid black;
     height: 1px;
     width: 500px;
 }
 
-.ligne.verticale
+.route.verticale
 {
     border-left: 1px solid black;
     height: 500px;
     width: 1px;
 }
 
-.ligne.droite
+.route.gauche
 {
-    position: relative;
-    left: 202px;
-    bottom: 150px;
+    position: absolute;
+    right: 100%;
+    top: 50%;
 }
 
-.ligne.droite > .carte
+.route.gauche > .destination
 {
-    position: relative;
-    bottom: 155px;
-    left: 500px;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translate(0%, -50%);
 }
 
-.ligne.droite > .categorie
+.route.droite
 {
-    position: relative;
-    bottom: 77.5px;
-    left: 500px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
 }
 
-.ligne.gauche
+.route.droite > .destination
 {
-    position: relative;
-    left: -500px;
-    bottom: 150px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(0%, -50%);
 }
 
-.ligne.gauche > .carte
+.route.haut
 {
-    position: relative;
-    left: -202px;
-    bottom: 155px;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
 }
 
-.ligne.gauche > .categorie
+.route.haut > .destination
 {
-    position: relative;
-    bottom: 77.5px;
-    left: -152px;
+    position: absolute;
+    bottom: 100%;
+    transform: translate(-50%, 0);
 }
 
-.ligne.haut
+.route.bas
 {
-    position: relative;
-    left: 100px;
-    bottom: 808px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
 }
 
-.ligne.haut > .carte
+.route.bas > .destination
 {
-    position: relative;
-    left: -202px;
-    bottom: 155px;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, 0);
 }
-
-.ligne.haut > .categorie
-{
-    position: relative;
-    bottom: 77.5px;
-    left: -152px;
-}
- */
+*/
