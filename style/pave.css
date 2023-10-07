@@ -21,8 +21,7 @@
 
 .pave_route
 {
-    height: 30px;
-    background-color: rgb(235, 161, 104);
-    border: 0.5px solid rgb(208,153,91, 0.2);
+    height: 15px;
+    background-color: rgb(201, 201, 201);
     border-radius: 8% 9% 7% 10%;
 }

@@ -1,18 +1,19 @@
 .route.verticale
 {
-    height: 479px;
+    height: 958px;
     width: 209px;
     padding: 1px;
     display: grid;
     grid-template-columns: 200px;
-    grid-template-rows: repeat(15, 30px);
+    grid-template-rows: repeat(60, 15px);
     gap: 2px;
 }
 
 .route.haut
 {
-    position: absolute;
-    bottom: 100%;
+    position: relative;
+    left: 50%;
+    z-index: 1;
 }
 
 .route.haut > .destination

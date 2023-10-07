@@ -63,7 +63,7 @@ function initialiserRoute()
         }
 
         //Ajout des pavés
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 20; i++) {
             route.appendChild(paveLigne5());
             route.appendChild(paveLigne6());
             route.appendChild(paveLigne7());
