@@ -60,7 +60,7 @@
 
 .bulle_habbo > .message > p
 {
-    font-family: PT Sans Narrow;
+    font-family: habbo_font;
     font-size: 15px;
     margin: 0px;
     text-align: left;

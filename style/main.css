@@ -1,6 +1,12 @@
 @font-face {
     font-family: habbo_font;
-    src: url(../font/Hardpixel.OTF);
+    src: url(../font/PTSansNarrow-Regular.ttf);
+}
+
+@font-face {
+    font-family: habbo_font;
+    src: url(../font/PTSansNarrow-Bold.ttf);
+    font-weight: bold;
 }
 
 body
