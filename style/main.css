@@ -1,3 +1,8 @@
+@font-face {
+    font-family: habbo_font;
+    src: url(../font/Hardpixel.OTF);
+}
+
 body
 {
     text-align: center;
