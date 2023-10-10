@@ -4,6 +4,8 @@
     height: 1px;
     width: 1px;
     position: relative;
+    top: 50%;
+    left: 50%;
     z-index: 1;
 }
 
@@ -17,14 +19,14 @@
 .bulle_habbo_root
 {
     width: fit-content;
-    position: relative;
     z-index: 1;
+    transform: translate(-50%);
+    margin-bottom: -3px;
 }
 
 .bulle_habbo
 {
     width: fit-content;
-    max-width: 400px;
     display: grid;
     grid-template-columns: 40px 1fr;
     position: relative;
@@ -32,7 +34,7 @@
     border-radius: 7px;
 }
 
-.bulle_habbo:before
+#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type > .bulle_habbo:before
 {
     content: "";
     background-color: transparent;
@@ -48,7 +50,7 @@
     transform: translate(-50%, 0);
 }
 
-.bulle_habbo:after
+#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type > .bulle_habbo:after
 {
     content: "";
     background-color: #cdcdcd;
@@ -89,6 +91,7 @@
     border-right: solid 2px rgba(0, 0, 0, 0);
     position: relative;
     z-index: -1;
+    min-width: max-content;
 }
 
 .bulle_habbo > .message > p
@@ -97,12 +100,13 @@
     font-size: 15px;
     margin: 0px;
     text-align: left;
-    display: inline;
+    max-width: 200px;
+    word-wrap: anywhere;
 }
 
-.bulle_habbo > .message > p:first-of-type
+.bulle_habbo > .message > p > span
 {
-    font-weight: 600;
+  font-weight: bold;
 }
 
 .bulle_habbo > .separation
@@ -132,4 +136,13 @@
     z-index: -1;
     top: 27px;
     left: 1px;
+}
+
+#habbo_personnage > .message_liste
+{
+    width: fit-content;
+    transform: translate(0%, -100%);
+    position: relative;
+    left: 15px;
+    top: -5px;
 }
