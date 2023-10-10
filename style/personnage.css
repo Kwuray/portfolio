@@ -32,6 +32,20 @@
     border-radius: 7px;
 }
 
+.bulle_habbo:after
+{
+    content: "";
+    background-color: color(srgb 0.7989 0.8041 0.8041);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    transform: translate(-50%, -3px) rotate(45deg);
+}
+
 .tete_bulle_habbo
 {
     width: 40px;
@@ -95,8 +109,8 @@
     width: 4px;
     height: 4px;
     border: solid 1px black;
-    top: 27px;
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: -1;
+    top: 27px;
     left: 1px;
 }
