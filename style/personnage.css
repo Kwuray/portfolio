@@ -32,18 +32,37 @@
     border-radius: 7px;
 }
 
+.bulle_habbo:before
+{
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 6.3px;
+    height: 4px;
+    border-top: solid 2px #cdcdcd;
+    border-bottom: solid 2px transparent;
+    border-left: solid 2px transparent;
+    border-right: solid 2px transparent;
+    transform: translate(-50%, 0);
+}
+
 .bulle_habbo:after
 {
     content: "";
-    background-color: color(srgb 0.7989 0.8041 0.8041);
+    background-color: #cdcdcd;
     position: absolute;
     top: 100%;
     left: 50%;
     width: 6px;
     height: 6px;
-    border-right: solid 2px black;
+    border-top: solid 2px transparent;
     border-bottom: solid 2px black;
-    transform: translate(-50%, -3px) rotate(45deg);
+    border-left: solid 2px transparent;
+    border-right: solid 2px black;
+    transform: translate(-50%, -4px) rotate(45deg);
+    z-index: -2;
 }
 
 .tete_bulle_habbo
