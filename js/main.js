@@ -11,11 +11,12 @@ let messageModel;
 //Lorsque la page est complètement chargée
 document.addEventListener("DOMContentLoaded", function()
 {
+    genererDecor();
     messageModel = document.getElementById("modele").getElementsByClassName("bulle_habbo_root")[0];
     personnage =
         {
             nom : "Nicolas",
-            listeMessageRoot : document.getElementById("habbo_personnage").getElementsByClassName("message_liste")[0],
+            listeMessageRoot : document.getElementsByClassName("habbo_personnage")[0].getElementsByClassName("message_liste")[0],
             parler : function (message)
             {
                 let messageElement = messageModel.cloneNode(true);
@@ -44,5 +45,4 @@ document.addEventListener("DOMContentLoaded", function()
             }
         }
     initialiserRoute();
-    genererDecor();
 });

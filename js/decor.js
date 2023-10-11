@@ -107,6 +107,12 @@ class Fleur extends ElementDecor
 function genererDecor()
 {
     decor = document.getElementById("decor");
+    let personnageHabbo = new PixelArt(89, 31, 1,"habbo_personnage", JSONHabboPersonnage.frames[0].grid);
+    let personnageHabboHtmlElement = personnageHabbo.htmlElement();
+    let listeMessage = document.createElement("div");
+    listeMessage.classList.add("message_liste");
+    personnageHabboHtmlElement.appendChild(listeMessage);
+    decor.appendChild(personnageHabboHtmlElement);
     let hauteurZone = decor.offsetHeight / 10;
     let largeurZone = decor.offsetWidth / 10;
     //On parcours des "sous-zones"
