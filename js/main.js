@@ -30,6 +30,17 @@ document.addEventListener("DOMContentLoaded", function()
                     dernierMessage.style.paddingBottom = getComputedStyle(dernierMessage).paddingBottom;
                 }
                 this.listeMessageRoot.appendChild(messageElement);
+                //Gestion de l'incrémentation du padding
+                messageElement.addEventListener("animationiteration", function ()
+                {
+                    let iterationCourante = Number(getComputedStyle(messageElement).getPropertyValue('--total-iteration'));
+                    iterationCourante++;
+                    let paddingDebut = iterationCourante * 40;
+                    let paddingFin = paddingDebut + 40;
+                    messageElement.style.setProperty('--padding-debut', paddingDebut + "px");
+                    messageElement.style.setProperty('--padding-fin', paddingFin + "px");
+                    messageElement.style.setProperty('--total-iteration', "" + iterationCourante);
+                });
             }
         }
     initialiserRoute();
