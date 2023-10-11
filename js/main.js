@@ -5,9 +5,33 @@ function nombreAleatoire(min, max)
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+let personnage;
+let messageModel;
+
 //Lorsque la page est complètement chargée
 document.addEventListener("DOMContentLoaded", function()
 {
+    messageModel = document.getElementById("modele").getElementsByClassName("bulle_habbo_root")[0];
+    personnage =
+        {
+            nom : "Nicolas",
+            listeMessageRoot : document.getElementById("habbo_personnage").getElementsByClassName("message_liste")[0],
+            parler : function (message)
+            {
+                let messageElement = messageModel.cloneNode(true);
+                //messageElement.getElementsByClassName("message")[0].getElementsByTagName("span")[0].textContent = this.nom + ": ";
+                messageElement.getElementsByClassName("message")[0].getElementsByTagName("p")[0].innerHTML = "<span>" + this.nom + ": " + "</span>" +  message;
+                //On arrête l'animation de la dernière bulle
+                let listeMessage = this.listeMessageRoot.getElementsByClassName("bulle_habbo_root");
+                if (listeMessage.length > 0)
+                {
+                    let dernierMessage = listeMessage[listeMessage.length - 1];
+                    dernierMessage.style.animationPlayState = "paused";
+                    dernierMessage.style.paddingBottom = getComputedStyle(dernierMessage).paddingBottom;
+                }
+                this.listeMessageRoot.appendChild(messageElement);
+            }
+        }
     initialiserRoute();
     genererDecor();
 });

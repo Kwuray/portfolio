@@ -146,3 +146,21 @@
     left: 15px;
     top: -5px;
 }
+
+@keyframes monter_message {
+    from {
+        padding-bottom: 0px;
+    }
+
+    to {
+        padding-bottom: 400px;
+    }
+}
+
+#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type
+{
+    animation-name: monter_message;
+    animation-timing-function: steps(10, end);
+    animation-duration: 50s;
+    animation-fill-mode: forwards;
+}
