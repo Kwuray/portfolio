@@ -12,25 +12,8 @@
 body
 {
     text-align: center;
+    margin: 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #root
 {
@@ -48,6 +31,25 @@ body
     position: relative;
     background-color: rgba(126, 204, 40);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #decor > .carte
 {

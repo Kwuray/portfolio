@@ -1,0 +1,99 @@
+@keyframes flouter
+{
+    from
+    {
+        filter: blur(0px);
+    }
+
+    to
+    {
+        filter: blur(5px);
+    }
+}
+
+@keyframes cacher-fond
+{
+    from
+    {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    to
+    {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes montrer-article
+{
+    from
+    {
+        left: 50vw;
+        top: 50vh;
+        width: 0vw;
+        min-height: 0.1vh;
+    }
+
+    50%
+    {
+        left: 25vw;
+        top: 48vh;
+        width: 50vw;
+        min-height: 1vh;
+    }
+
+    to
+    {
+        left: 25vw;
+        top: 5vh;
+        width: 50vw;
+        min-height: 90vh;
+    }
+}
+
+#decor.flouter
+{
+    animation-name: flouter;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#ombre
+{
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+#ombre.afficher
+{
+    display: block;
+    animation-name: cacher-fond;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.article
+{
+    position: fixed;
+    background-color: white;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    max-height: 90vh;
+    overflow: scroll;
+}
+
+.article.montrer
+{
+    animation-name: montrer-article;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.article .contenu
+{
+    display: none;
+}

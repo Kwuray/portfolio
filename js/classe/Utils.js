@@ -10,7 +10,10 @@ class Utils
     static divAvecClasse(classeNom)
     {
         let result = document.createElement("div");
-        result.classList.add(classeNom);
+        if (classeNom != "")
+        {
+            result.classList.add(classeNom);
+        }
         return result;
     }
 }

@@ -154,7 +154,8 @@
     top: -15px;
 }
 
-@keyframes monter_message {
+@keyframes monter_message
+{
     from
     {
         padding-bottom: var(--padding-debut);

@@ -2,7 +2,7 @@ class PersonnageHabbo extends PixelArt
 {
     constructor(personnageRoot, listeMessageRoot, nom)
     {
-        super(31, 89, 2,"habbo_personnage", JSONHabboPersonnage.frames[0].grid);
+        super(31, 89, 2,"", JSONHabboPersonnage.frames[0].grid);
         this.personnageRoot = personnageRoot;
         this.listeMessageRoot = listeMessageRoot;
         this.nom = nom;
