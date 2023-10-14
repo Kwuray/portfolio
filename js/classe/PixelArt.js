@@ -1,12 +1,10 @@
-class PixelArt
+class PixelArt extends DecorElement
 {
-    constructor(hauteur, largeur, taillePixel, nomClasse, grid)
+    constructor(largeur, hauteur, taillePixel, nomClasse, grid)
     {
-        this.hauteur = hauteur;
-        this.largeur = largeur;
-        this.taillePixel = taillePixel;
-        this.nomClasse = nomClasse;
+        super(largeur, hauteur, taillePixel, nomClasse);
         this.grid = grid;
+        this.pixelArtHtmlElement = null;
     }
 
     debutLigne(numLigne)
@@ -41,9 +39,13 @@ class PixelArt
 
     htmlElement()
     {
-        let resultat = document.createElement("div");
+
+    }
+
+    fabriquerPixelArt()
+    {
+        let resultat = this.genererDecorElementHtml();
         resultat.classList.add("pixel_art");
-        resultat.classList.add(this.nomClasse);
         resultat.style.height = "" + (this.hauteur * this.taillePixel);
         resultat.style.width = "" + (this.largeur * this.taillePixel);
         for (let i = 0; i < this.hauteur; i++)
@@ -53,7 +55,7 @@ class PixelArt
             let ligne = document.createElement("div");
             ligne.style.top = (i * this.taillePixel) + "px";
             ligne.style.left = (debut * this.taillePixel) + "px";
-            ligne.style.width = fin - debut + 1;
+            ligne.style.width = (fin - debut + 1) * this.taillePixel;
             ligne.style.height = this.taillePixel;
             for (let j = debut; j <= fin; j++)
             {
@@ -71,6 +73,15 @@ class PixelArt
             }
             resultat.appendChild(ligne);
         }
-        return resultat;
+        this.pixelArtHtmlElement = resultat;
+    }
+
+    getPixelArtHtmlElement()
+    {
+        if (this.pixelArtHtmlElement == null)
+        {
+            this.fabriquerPixelArt();
+        }
+        return this.pixelArtHtmlElement;
     }
 }

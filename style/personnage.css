@@ -1,4 +1,4 @@
-.habbo_personnage
+#habbo_personnage
 {
     position: relative;
     top: 50%;
@@ -11,7 +11,7 @@
     position: absolute;
 }
 
-.habbo_personnage > div:hover
+#habbo_personnage > .pixel_art > div:hover
 {
     cursor: pointer;
 }
@@ -41,7 +41,7 @@
     border-radius: 7px;
 }
 
-.habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type > .bulle_habbo:before
+#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type > .bulle_habbo:before
 {
     content: "";
     background-color: transparent;
@@ -57,7 +57,7 @@
     transform: translate(-50%, 0);
 }
 
-.habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type > .bulle_habbo:after
+#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type > .bulle_habbo:after
 {
     content: "";
     background-color: #cdcdcd;
@@ -145,13 +145,13 @@
     left: 1px;
 }
 
-.habbo_personnage > .message_liste
+#habbo_personnage > .message_liste
 {
     width: fit-content;
     transform: translate(0%, -100%);
     position: relative;
-    left: 15px;
-    top: -5px;
+    left: 50%;
+    top: -15px;
 }
 
 @keyframes monter_message {
@@ -166,7 +166,7 @@
     }
 }
 
-.habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type
+#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type
 {
     --total-iteration: 0;
     --padding-debut: 0px;

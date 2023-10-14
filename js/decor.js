@@ -1,120 +1,22 @@
 let decor;
-
-class ElementDecor
+let personnageHabbo;
+function decorAleatoire()
 {
-    constructor(largeur, hauteur, classCss, taillePixel)
-    {
-        this.classCss = classCss;
-        this.largeur = largeur * taillePixel;
-        this.hauteur = hauteur * taillePixel;
-        this.taillePixel = taillePixel;
-        this.largeurDebut = 0;
-        this.hauteurDebut = 0;
-        this.largeurFin = largeur * taillePixel;
-        this.hauteurFin = hauteur * taillePixel;
-    }
-
-    getHauteur()
-    {
-        return this.hauteur;
-    }
-
-    getLargeur()
-    {
-        return this.largeur
-    }
-
-    getTaillePixel()
-    {
-        return this.taillePixel;
-    }
-
-    definirPosition(largeurDebut, hauteurDebut)
-    {
-        this.largeurDebut = largeurDebut;
-        this.hauteurDebut = hauteurDebut;
-        this.largeurFin = largeurDebut + this.largeur;
-        this.hauteurFin = hauteurDebut + this.hauteur;
-    }
-
-    conflitAvecAutreElementDecor(elementDecor)
-    {
-        /*console.log("moi " + this.classCss);
-        console.log("[" + this.largeurDebut + ";" + this.hauteurDebut + "] - [" + this.largeurFin + ";" + this.hauteurFin + "]");
-        console.log("lui " + elementDecor.classCss);
-        console.log("[" + elementDecor.largeurDebut + ";" + elementDecor.hauteurDebut + "] - [" + elementDecor.largeurFin + ";" + elementDecor.hauteurFin + "]");*/
-        //Vérification du coin haut gauche
-        if ((elementDecor.largeurDebut >= this.largeurDebut && elementDecor.largeurDebut <= this.largeurFin) && (elementDecor.hauteurDebut >= this.hauteurDebut && elementDecor.hauteurDebut <= this.hauteurFin))
-        {
-            return true;
-        }
-        //Vérification du coin haut droit
-        if ((elementDecor.largeurFin >= this.largeurDebut && elementDecor.largeurFin <= this.largeurFin) && (elementDecor.hauteurDebut >= this.hauteurDebut && elementDecor.hauteurDebut <= this.hauteurFin))
-        {
-            return true;
-        }
-        //Vérification du coin bas gauche
-        if ((elementDecor.largeurDebut >= this.largeurDebut && elementDecor.largeurDebut <= this.largeurFin) && (elementDecor.hauteurFin >= this.hauteurDebut && elementDecor.hauteurFin <= this.hauteurFin))
-        {
-            return true;
-        }
-        //Vérification du coin bas droit
-        if ((elementDecor.largeurFin >= this.largeurDebut && elementDecor.largeurFin <= this.largeurFin) && (elementDecor.hauteurFin >= this.hauteurDebut && elementDecor.hauteurFin <= this.hauteurFin))
-        {
-            return true;
-        }
-        return false;
-    }
-
-    genererElementHtml()
-    {
-        let decorDiv = document.createElement("div");
-        decorDiv.classList.add(this.classCss);
-        decorDiv.style.position = "absolute";
-        decorDiv.style.left = this.largeurDebut;
-        decorDiv.style.top = this.hauteurDebut;
-        return decorDiv;
-    }
-
-    static aleatoire()
-    {
-        let alea = Math.random();
-        if (alea >= 0 && alea < 0.50)
-        {
-            return new Herbe();
-        }
-        else
-        {
-            return new Fleur();
-        }
-    }
-}
-
-class Herbe extends ElementDecor
-{
-    constructor() {
-        super(7, 5, "herbe", 5);
-    }
-}
-
-class Fleur extends ElementDecor
-{
-    constructor() {
-        super(3, 4, "fleur", 5);
-    }
+    //Initialisation de tous les décors possibles
+    let fleur = new PixelArt(3, 4, 5, "fleur", JSONFleur.frames[0].grid);
+    let herbe = new PixelArt(7, 5, 5, "herbe", JSONHerbe.frames[0].grid);
+    let listeDecorElement = new Array(fleur, herbe);
+    return listeDecorElement[Utils.nombreAleatoire(0, listeDecorElement.length - 1)]
 }
 
 function genererDecor()
 {
+    personnageHabbo = new PersonnageHabbo(document.getElementById("habbo_personnage"), document.getElementById("habbo_personnage").getElementsByClassName("message_liste")[0], "Nicolas");
     decor = document.getElementById("decor");
-    let personnageHabbo = new PixelArt(89, 31, 1,"habbo_personnage", JSONHabboPersonnage.frames[0].grid);
-    let personnageHabboHtmlElement = personnageHabbo.htmlElement();
-    let listeMessage = document.createElement("div");
-    listeMessage.classList.add("message_liste");
-    personnageHabboHtmlElement.appendChild(listeMessage);
-    decor.appendChild(personnageHabboHtmlElement);
+    personnageHabbo.personnageRoot.appendChild(personnageHabbo.getPixelArtHtmlElement());
     let hauteurZone = decor.offsetHeight / 10;
     let largeurZone = decor.offsetWidth / 10;
+    let decorHtml = "";
     //On parcours des "sous-zones"
     for (let i = 0; i < decor.offsetHeight; i += hauteurZone)
     {//Parcours des lignes
@@ -126,9 +28,9 @@ function genererDecor()
             //On créer un objet décor
             for (let k = 0; k < 5; k++)
             {
-                let decorActuel = ElementDecor.aleatoire();
+                let decorActuel = decorAleatoire();
                 //On calcul au hasard les coordonnées de départ (selon un interval max)
-                decorActuel.definirPosition(nombreAleatoire(j, largeurFin - decorActuel.getLargeur() - decorActuel.getTaillePixel()), nombreAleatoire(i, hauteurFin - decorActuel.getHauteur() - decorActuel.getTaillePixel()));
+                decorActuel.definirPosition(Utils.nombreAleatoire(j, largeurFin - decorActuel.largeur - decorActuel.taillePixel), Utils.nombreAleatoire(i, hauteurFin - decorActuel.hauteur - decorActuel.taillePixel));
                 //On regarde les décors déjà positionnées
                 let index = 0;
                 let stop = false;
@@ -139,11 +41,13 @@ function genererDecor()
                 }
                 if (stop == false)
                 { //On peut ajouter le décor !
-                    let html = decorActuel.genererElementHtml()
-                    decor.appendChild(html);
+                    let html = document.createElement("div");
+                    html.appendChild(decorActuel.getPixelArtHtmlElement());
+                    decorHtml += html.innerHTML;
                     decorListe.push(decorActuel);
                 }
             }
         }
     }
+    decor.innerHTML += decorHtml;
 }
