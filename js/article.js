@@ -13,13 +13,18 @@ function initialiserArticles()
         }
     })
 
-    decor.addEventListener("animationend", function ()
+    for (const scene of document.getElementsByClassName("scene"))
     {
-        if (decor.classList.contains("afficher"))
+        scene.addEventListener("animationend", function ()
         {
-            decor.classList.remove("afficher");
-        }
-    })
+            if (scene.classList.contains("afficher"))
+            {
+                scene.classList.remove("afficher");
+            }
+        })
+    }
+
+
 
     articleListe.forEach((value, key) =>
     {

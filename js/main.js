@@ -1,40 +1,35 @@
 //Lorsque la page est complètement chargée
 
-let decor;
-let personnageHabbo;
 let articleListe = new Map();
 let articleActuel = null;
+let sceneListe = new Map();
+let sceneActuelle = null;
 let ombre;
 
 function initialiserVariablesGlobales()
 {
-    personnageHabbo = new PersonnageHabbo("Nicolas");
-    decor = document.getElementById("decor");
+
     for (const article of document.getElementsByTagName("article"))
     {
-        articleListe.set(article.id, article);
+        articleListe.set(article.dataset["nom"], article);
     }
     ombre = document.getElementById("ombre");
+    sceneListe.set("accueil", new SceneAccueil());
+}
+
+function selectionnerScene(nom)
+{
+    if (sceneActuelle != null)
+    {
+        sceneActuelle.masquer();
+    }
+    sceneActuelle = sceneListe.get(nom);
+    sceneActuelle.afficher();
 }
 
 document.addEventListener("DOMContentLoaded", function()
 {
     initialiserVariablesGlobales();
-    genererDecor();
     initialiserArticles();
-
-    decor.appendChild(personnageHabbo.personnageRoot);
-
-    //Gestion du clic sur le personnage
-    let lignePersonnageHabbo = document.getElementById("habbo_personnage").getElementsByClassName("pixel_art")[0].getElementsByTagName("div");
-    for (const ligne of lignePersonnageHabbo)
-    {
-        ligne.addEventListener("click", ev =>
-        {
-            afficherArticle("article_presentation");
-        })
-    }
-
-    personnageHabbo.parler("Bonjour et bienvenue sur mon portfolio :)");
-    personnageHabbo.parler("N'hésitez pas à cliquer sur moi pour en savoir plus !");
+    selectionnerScene("accueil");
 });

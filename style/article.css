@@ -54,7 +54,7 @@
     }
 }
 
-#decor.cacher, #decor.afficher
+.scene.cacher, .scene.afficher
 {
     animation-name: flouter;
     animation-duration: 2s;

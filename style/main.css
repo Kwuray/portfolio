@@ -24,124 +24,22 @@ body
     width: 100vw;
 }
 
-#decor
+.scene
+{
+    display: none;
+    width: 100%;
+    height: 2000px;
+}
+
+.scene.selection
+{
+    display: block;
+}
+
+.scene[data-nom="accueil"] > .prairie
 {
     width: 100%;
     height: 2000px;
     position: relative;
     background-color: rgba(126, 204, 40);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#decor > .carte
-{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.carte
-{
-    height: 300px;
-    width: 400px;
-    border: 2px solid black;
-}
-
-.categorie
-{
-    height: 150px;
-    width: 150px;
-    border: 2px solid black;
-}
-/*
-.route.horizontale
-{
-    border-top: 1px solid black;
-    height: 1px;
-    width: 500px;
-}
-
-.route.verticale
-{
-    border-left: 1px solid black;
-    height: 500px;
-    width: 1px;
-}
-
-.route.gauche
-{
-    position: absolute;
-    right: 100%;
-    top: 50%;
-}
-
-.route.gauche > .destination
-{
-    position: absolute;
-    right: 100%;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.route.droite
-{
-    position: absolute;
-    left: 100%;
-    top: 50%;
-}
-
-.route.droite > .destination
-{
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translate(0%, -50%);
-}
-
-.route.haut
-{
-    position: absolute;
-    left: 50%;
-    bottom: 100%;
-}
-
-.route.haut > .destination
-{
-    position: absolute;
-    bottom: 100%;
-    transform: translate(-50%, 0);
-}
-
-.route.bas
-{
-    position: absolute;
-    left: 50%;
-    top: 100%;
-}
-
-.route.bas > .destination
-{
-    position: absolute;
-    top: 100%;
-    transform: translate(-50%, 0);
-}
-*/
