@@ -1,13 +1,20 @@
 class PersonnageHabbo extends PixelArt
 {
-    constructor(personnageRoot, listeMessageRoot, nom)
+    constructor(nom)
     {
         super(31, 89, 2,"", JSONHabboPersonnage.frames[0].grid);
-        this.personnageRoot = personnageRoot;
-        this.listeMessageRoot = listeMessageRoot;
+        this.personnageRoot = document.createElement("div");
+        this.personnageRoot.id = "habbo_personnage";
+        this.personnageRoot.appendChild(Utils.divAvecClasse("message_liste"));
+        this.personnageRoot.style.height = this.hauteur * this.taillePixel + "px";
+        this.personnageRoot.style.width = this.largeur * this.taillePixel + "px";
         this.nom = nom;
-        personnageRoot.style.height = this.hauteur * this.taillePixel + "px";
-        personnageRoot.style.width = this.largeur * this.taillePixel + "px";
+    }
+
+    tete()
+    {
+        let resultat = new PixelArt(27, 35, 1, "habbo_tete", JSONHabboTete.frames[0].grid)
+        return resultat.getPixelArtHtmlElement();
     }
 
     bulleMessage()
@@ -16,7 +23,7 @@ class PersonnageHabbo extends PixelArt
 
         let bulle = Utils.divAvecClasse("bulle_habbo");
         let teteBulle = Utils.divAvecClasse("tete_bulle_habbo");
-        teteBulle.appendChild(Utils.divAvecClasse("habbo_tete"));
+        teteBulle.appendChild(this.tete());
 
         let separation = Utils.divAvecClasse("separation");
         separation.appendChild(Utils.divAvecClasse("trait"));
@@ -39,14 +46,14 @@ class PersonnageHabbo extends PixelArt
         let messageElement = this.bulleMessage();
         messageElement.getElementsByClassName("message")[0].getElementsByTagName("p")[0].innerHTML = "<span>" + this.nom + ": " + "</span>" +  message;
         //On arrête l'animation de la dernière bulle
-        let listeMessage = this.listeMessageRoot.getElementsByClassName("bulle_habbo_root");
+        let listeMessage = this.personnageRoot.getElementsByClassName("bulle_habbo_root");
         if (listeMessage.length > 0)
         {
             let dernierMessage = listeMessage[listeMessage.length - 1];
             dernierMessage.style.animationPlayState = "paused";
             dernierMessage.style.paddingBottom = getComputedStyle(dernierMessage).paddingBottom;
         }
-        this.listeMessageRoot.appendChild(messageElement);
+        this.personnageRoot.getElementsByClassName("message_liste")[0].appendChild(messageElement);
         //Gestion de l'incrémentation du padding
         messageElement.addEventListener("animationiteration", function ()
         {

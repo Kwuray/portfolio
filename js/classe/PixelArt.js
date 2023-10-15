@@ -37,11 +37,6 @@ class PixelArt extends DecorElement
         return i;
     }
 
-    htmlElement()
-    {
-
-    }
-
     fabriquerPixelArt()
     {
         let resultat = this.genererDecorElementHtml();
