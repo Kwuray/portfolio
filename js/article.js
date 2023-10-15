@@ -42,7 +42,7 @@ function afficherArticle(id)
 {
     articleActuel = articleListe.get(id);
     ombre.classList.add("afficher");
-    decor.classList.add("cacher");
+    sceneActuelle.root.classList.add("cacher");
     articleActuel.classList.add("afficher");
 }
 
@@ -50,8 +50,8 @@ function cacherArticle()
 {
     ombre.getAnimations()[0].reverse();
     ombre.classList.replace("afficher", "cacher");
-    decor.getAnimations()[0].reverse();
-    decor.classList.replace("cacher", "afficher");
+    sceneActuelle.root.getAnimations()[0].reverse();
+    sceneActuelle.root.classList.replace("cacher", "afficher");
     articleActuel.classList.replace("afficher", "cacher");
     articleActuel.getAnimations()[0].reverse();
 }
