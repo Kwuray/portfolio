@@ -31,15 +31,17 @@
         left: 50vw;
         top: 50vh;
         width: 0vw;
-        min-height: 0.1vh;
+        min-height: 0vh;
+        max-height: 0vh;
     }
 
     50%
     {
-        left: 25vw;
-        top: 48vh;
-        width: 50vw;
-        min-height: 1vh;
+        left: 5vw;
+        top: 49.6vh;
+        width: 90vw;
+        min-height: 0.2vh;
+        max-height: 0.2vh;
     }
 
     to
@@ -48,10 +50,11 @@
         top: 5vh;
         width: 50vw;
         min-height: 90vh;
+        max-height: 90vh;
     }
 }
 
-#decor.flouter
+#decor.cacher, #decor.afficher
 {
     animation-name: flouter;
     animation-duration: 2s;
@@ -68,7 +71,7 @@
     z-index: 1;
 }
 
-#ombre.afficher
+#ombre.afficher, #ombre.cacher
 {
     display: block;
     animation-name: cacher-fond;
@@ -76,24 +79,23 @@
     animation-fill-mode: forwards;
 }
 
-.article
+article
 {
+    display: none;
     position: fixed;
     background-color: white;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    min-height: 90vh;
     max-height: 90vh;
-    overflow: scroll;
+    overflow: auto;
+    z-index: 1;
 }
 
-.article.montrer
+article.afficher, article.cacher
 {
+    display: block;
     animation-name: montrer-article;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-}
-
-.article .contenu
-{
-    display: none;
 }

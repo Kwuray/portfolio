@@ -1,5 +1,3 @@
-let decor;
-let personnageHabbo;
 function decorAleatoire()
 {
     //Initialisation de tous les décors possibles
@@ -11,8 +9,6 @@ function decorAleatoire()
 
 function genererDecor()
 {
-    personnageHabbo = new PersonnageHabbo(document.getElementById("habbo_personnage"), document.getElementById("habbo_personnage").getElementsByClassName("message_liste")[0], "Nicolas");
-    decor = document.getElementById("decor");
     personnageHabbo.personnageRoot.appendChild(personnageHabbo.getPixelArtHtmlElement());
     let hauteurZone = decor.offsetHeight / 10;
     let largeurZone = decor.offsetWidth / 10;
