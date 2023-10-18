@@ -50,7 +50,7 @@ class SceneAccueil
                 {
                     let decorActuel = this.decorAleatoire();
                     //On calcul au hasard les coordonnées de départ (selon un interval max)
-                    decorActuel.definirPosition(Utils.nombreAleatoire(j, largeurFin - decorActuel.largeur - decorActuel.taillePixel), Utils.nombreAleatoire(i, hauteurFin - decorActuel.hauteur - decorActuel.taillePixel));
+                    decorActuel.definirPosition(Utils.nombreAleatoire(j, largeurFin - (decorActuel.largeur * decorActuel.taillePixel)), Utils.nombreAleatoire(i, hauteurFin - (decorActuel.hauteur * decorActuel.taillePixel)));
                     //On regarde les décors déjà positionnées
                     let index = 0;
                     let stop = false;

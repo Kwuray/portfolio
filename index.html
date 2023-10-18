@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="style/pave.css">
         <link rel="stylesheet" href="style/personnage.css">
         <link rel="stylesheet" href="style/article.css">
+        <link rel="stylesheet" href="style/accueil.css">
         <script src="js/classe/Utils.js"></script>
         <script src="js/classe/DecorElement.js"></script>
         <script src="js/classe/PixelArt.js"></script>
@@ -22,13 +23,21 @@
         <title>Portfolio</title>
     </head>
     <body>
-        <div id="root">
-            <div data-nom="accueil" class="scene"></div>
-            <div data-nom="projet" class="scene"></div>
-            <div data-nom="experience" class="scene"></div>
+        <div data-nom="accueil" class="scene">
+            <div class="plage">
+                <div class="mer">
+                    <div class="vague"></div>
+                    <div class="vague" style="animation-delay: 3s"></div>
+                    <div class="vaguelette"></div>
+                </div>
+                <div class="sable"></div>
+            </div>
         </div>
+        <div data-nom="projet" class="scene"></div>
+        <div data-nom="experience" class="scene"></div>
         <div id="ombre"></div>
         <article data-nom="presentation">
         </article>
+    <div class="test"></div>
     </body>
 </html>
