@@ -56,7 +56,7 @@ function initialiserInfos()
 document.addEventListener("DOMContentLoaded", function()
 {
     initialiserVariablesGlobales();
-    initialiserInfos();
     initialiserArticles();
     selectionnerScene("accueil");
+    initialiserInfos();
 });

@@ -7,7 +7,13 @@ class PersonnageHabbo extends PixelArt
         personnageRoot.appendChild(Utils.divAvecClasse("message_liste"));
         personnageRoot.style.height = this.hauteur * this.taillePixel + "px";
         personnageRoot.style.width = this.largeur * this.taillePixel + "px";
-        personnageRoot.appendChild(this.getPixelArtHtmlElement());
+        let pixelArt = this.getPixelArtHtmlElement();
+        let info = document.createElement("span");
+        info.classList.add("info");
+        info.textContent = "C'est moi ! Enfin, mon personnage Habbo plutôt ;)";
+        pixelArt.appendChild(info);
+        personnageRoot.appendChild(pixelArt);
+        personnageRoot.getElementsByClassName("pixel_art")[0]
         this.nom = nom;
     }
 
