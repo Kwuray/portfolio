@@ -10,7 +10,7 @@ class PersonnageHabbo extends PixelArt
         let pixelArt = this.getPixelArtHtmlElement();
         let info = document.createElement("span");
         info.classList.add("info");
-        info.textContent = "C'est moi ! Enfin, mon personnage Habbo plutôt ;)";
+        info.textContent = "C'est moi ! Enfin, mon personnage Habbo plutôt :P";
         pixelArt.appendChild(info);
         personnageRoot.appendChild(pixelArt);
         personnageRoot.getElementsByClassName("pixel_art")[0]
