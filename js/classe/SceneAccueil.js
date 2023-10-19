@@ -25,8 +25,8 @@ class SceneAccueil
     decorAleatoire()
     {
         //Initialisation de tous les décors possibles
-        let fleur = new PixelArt(3, 4, 5, "fleur", JSONFleur.frames[0].grid);
-        let herbe = new PixelArt(7, 5, 5, "herbe", JSONHerbe.frames[0].grid);
+        let fleur = new PixelArt(3, 4, 2, "fleur", JSONFleur.frames[0].grid);
+        let herbe = new PixelArt(7, 5, 2, "herbe", JSONHerbe.frames[0].grid);
         let listeDecorElement = new Array(fleur, herbe);
         return listeDecorElement[Utils.nombreAleatoire(0, listeDecorElement.length - 1)]
     }
@@ -72,6 +72,7 @@ class SceneAccueil
     }
     initialiser()
     {
+        let route1 = new Route(18, 5, 10, 4);
         this.genererPrairie();
         //Gestion du clic sur le personnage
         let lignePersonnageHabbo = document.getElementById("habbo_personnage").getElementsByClassName("pixel_art")[0].getElementsByTagName("div");
@@ -84,7 +85,6 @@ class SceneAccueil
         }
         this.personnageHabbo.parler("Bonjour et bienvenue sur mon portfolio :)");
         this.personnageHabbo.parler("N'hésitez pas à cliquer sur moi pour en savoir plus !");
-        this.personnageHabbo.parler("coucou");
         this.dejaInitilise = true;
     }
 }

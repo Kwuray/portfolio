@@ -33,3 +33,21 @@ body
 {
     display: grid;
 }
+
+.info
+{
+    display: none;
+    font-family: habbo_font;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+    width: fit-content;
+    max-width: 200px;
+}
+
+.info.afficher
+{
+    display: block;
+    position: fixed;
+}

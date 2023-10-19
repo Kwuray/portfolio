@@ -18,10 +18,3 @@
     grid-template-columns: 22px 32px 20px 28px 36px 24px 34px;
     gap: 2px;
 }
-
-.pave_route
-{
-    height: 15px;
-    background-color: rgb(201, 201, 201);
-    border-radius: 8% 9% 7% 10%;
-}
