@@ -2,7 +2,7 @@
 {
     from
     {
-        left: 20px;
+        left: 60%;
         border-left: solid 10px rgba(255, 255, 255, 0);
         background-color: rgba(255, 255, 255, 0);
     }
@@ -20,60 +20,41 @@
     {
         border-left: solid 10px rgba(255, 255, 255, 0);
         background-color: rgba(255, 255, 255, 0);
-        left: 150px;
+        left: 100%;
     }
 }
 
 .scene[data-nom="accueil"]
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 150px 250px 1500px;
+    grid-template-rows: 1000px;
 }
 
 .scene[data-nom="accueil"] > .prairie
 {
     position: relative;
-    width: 2500px;
-    height: 3000px;
     background-color: rgba(126, 204, 40);
 }
 
-.scene[data-nom="accueil"] > .plage
+.scene[data-nom="accueil"] > .sable
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.scene[data-nom="accueil"] > .plage > .sable
-{
-    width: 250px;
-    height: 3000px;
     background-color: lightgoldenrodyellow;
     background: linear-gradient(90deg, lightgoldenrodyellow 0%, lightgoldenrodyellow 80%, rgba(126, 204, 40) 100%);
 }
 
-.scene[data-nom="accueil"] > .plage > .mer
+.scene[data-nom="accueil"] > .mer
 {
-    width: 150px;
-    height: 3000px;
+    position: relative;
     background-color: cornflowerblue;
 }
 
-.scene[data-nom="accueil"] > .plage .vague
+.scene[data-nom="accueil"] > .mer > .vague
 {
     position: absolute;
-    height: 3000px;
-    width: 20px;
+    height: 100%;
+    width: 14%;
+    overflow: hidden;
     animation-name: vague;
     animation-duration: 6s;
     animation-iteration-count: infinite;
-}
-
-.vaguelette
-{
-    height: 10px;
-    width: 2px;
-    background-color: steelblue;
-    position: relative;
-    left: 10px;
 }

@@ -28,8 +28,6 @@
 {
     from
     {
-        left: 50vw;
-        top: 50vh;
         width: 0vw;
         min-height: 0vh;
         max-height: 0vh;
@@ -37,8 +35,6 @@
 
     50%
     {
-        left: 5vw;
-        top: 49.6vh;
         width: 90vw;
         min-height: 0.2vh;
         max-height: 0.2vh;
@@ -46,8 +42,6 @@
 
     to
     {
-        left: 25vw;
-        top: 5vh;
         width: 50vw;
         min-height: 90vh;
         max-height: 90vh;
@@ -84,11 +78,10 @@ article
     display: none;
     position: fixed;
     background-color: white;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    min-height: 90vh;
-    max-height: 90vh;
     overflow: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
 }
 

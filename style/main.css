@@ -18,15 +18,18 @@ body
 {
     display: none;
     border: 3px solid black;
-    position: relative;
     overflow: scroll;
-    height: 90vh;
-    width: 90vw;
-    top: 5vh;
-    left: 5vw;
+    max-height: 90vh;
+    max-width: 90vw;
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .scene.selection
 {
-    display: block;
+    display: grid;
 }

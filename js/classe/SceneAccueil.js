@@ -4,8 +4,7 @@ class SceneAccueil
     {
         this.personnageHabbo = new PersonnageHabbo("Nicolas");
         this.root = document.querySelectorAll(".scene, .accueil")[0];
-        this.prairie = Utils.divAvecClasse("prairie");
-        this.root.appendChild(this.prairie);
+        this.prairie = this.root.getElementsByClassName("prairie")[0];
         this.dejaInitilise = false;
     }
 
@@ -46,7 +45,7 @@ class SceneAccueil
                 let decorationListe = new Array();
                 let largeurFin = j + largeurZone;
                 //On créer un objet décor
-                for (let k = 0; k < 5; k++)
+                for (let k = 0; k < 2; k++)
                 {
                     let decorActuel = this.decorAleatoire();
                     //On calcul au hasard les coordonnées de départ (selon un interval max)
@@ -73,10 +72,7 @@ class SceneAccueil
     }
     initialiser()
     {
-        this.personnageHabbo.personnageRoot.appendChild(this.personnageHabbo.getPixelArtHtmlElement());
-        this.prairie.appendChild(this.personnageHabbo.personnageRoot);
         this.genererPrairie();
-
         //Gestion du clic sur le personnage
         let lignePersonnageHabbo = document.getElementById("habbo_personnage").getElementsByClassName("pixel_art")[0].getElementsByTagName("div");
         for (const ligne of lignePersonnageHabbo)
@@ -86,9 +82,9 @@ class SceneAccueil
                 afficherArticle("presentation");
             })
         }
-
         this.personnageHabbo.parler("Bonjour et bienvenue sur mon portfolio :)");
         this.personnageHabbo.parler("N'hésitez pas à cliquer sur moi pour en savoir plus !");
+        this.personnageHabbo.parler("coucou");
         this.dejaInitilise = true;
     }
 }
