@@ -38,8 +38,46 @@
 
 .scene[data-nom="accueil"] > .sable
 {
-    background-color: lightgoldenrodyellow;
+    height: 100%;
     background: linear-gradient(90deg, lightgoldenrodyellow 0%, lightgoldenrodyellow 80%, rgba(126, 204, 40) 100%);
+}
+
+.scene[data-nom="accueil"] > .sable > .decor
+{
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: repeat(21, 1fr);
+    position: relative;
+    top: 20px;
+    left: 50px;
+    row-gap: 20px;
+}
+
+.scene[data-nom="accueil"] > .sable > .decor > .serviette
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: 6px;
+    width: 45px;
+}
+
+.scene[data-nom="accueil"] > .sable > .decor > .serviette > div
+{
+    width: 30px;
+    height: 10px;
+}
+
+.scene[data-nom="accueil"] > .sable > .decor > .serviette > div > div
+{
+    position: relative;
+    left: 75%;
+    top: 3px;
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.5);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    z-index: 1;
 }
 
 .scene[data-nom="accueil"] > .mer

@@ -36,8 +36,8 @@ function initialiserInfos()
         let parent = info.parentElement;
         parent.addEventListener("mousemove", (e) =>
         {
-            info.style.left = e.screenX + 10 + "px";
-            info.style.top = e.clientY + 10 + "px";
+            info.style.left = e.pageX + 10 + "px";
+            info.style.top = e.pageY + 10 + "px";
         })
         parent.addEventListener("mouseleave", (e) =>
         {

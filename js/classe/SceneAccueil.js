@@ -70,10 +70,26 @@ class SceneAccueil
         }
         this.prairie.innerHTML += prairieHtml;
     }
+
+    modifierServiettesPlage()
+    {
+        let servietteListe = this.root.getElementsByClassName("serviette");
+        let couleurListe = new Array("cadetblue", "brown", "cornflowerblue", "darkorange");
+        for (const serviette of servietteListe)
+        {
+            serviette.style.left = Utils.nombreAleatoire(0, 75) + "px";
+            serviette.style.top = Utils.nombreAleatoire(-8, 8) + "px";
+            for (const element of serviette.querySelectorAll("div"))
+            {
+                element.style.backgroundColor = couleurListe[Utils.nombreAleatoire(0, couleurListe.length - 1)]
+            }
+        }
+    }
     initialiser()
     {
         let route1 = new Route(18, 5, 10, 4);
         this.genererPrairie();
+        this.modifierServiettesPlage();
         //Gestion du clic sur le personnage
         let lignePersonnageHabbo = document.getElementById("habbo_personnage").getElementsByClassName("pixel_art")[0].getElementsByTagName("div");
         for (const ligne of lignePersonnageHabbo)
