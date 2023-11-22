@@ -23,7 +23,7 @@ body
     max-width: 90vw;
     height: fit-content;
     width: fit-content;
-    position: relative;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

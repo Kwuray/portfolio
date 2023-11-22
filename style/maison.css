@@ -1,0 +1,45 @@
+.maison
+{
+    position: relative;
+    z-index: 1;
+    width: 650px;
+    height: 350px;
+    border: ridge 10px burlywood;
+    background-color: snow;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.bureau
+{
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    height: 50%;
+    width: 10%;
+    background-color: chocolate;
+    box-shadow: 2px 0px 0px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid burlywood;
+}
+
+.clavier
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    height: 60px;
+    width: 20px;
+    background-color: lightgrey;
+}
+
+.clavier > .touche
+{
+    width: 3.75px;
+    height: 3.75px;
+    background-color: whitesmoke;
+    border-radius: 0.5px;
+    border: solid 0.2px rgba(0, 0, 0, 0.2);
+}

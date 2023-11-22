@@ -147,27 +147,3 @@
     left: 50%;
     top: -15px;
 }
-
-@keyframes monter_message
-{
-    from
-    {
-        padding-bottom: var(--padding-debut);
-    }
-
-    to
-    {
-        padding-bottom: var(--padding-fin);
-    }
-}
-
-#habbo_personnage > .message_liste > .bulle_habbo_root:last-of-type
-{
-    --total-iteration: 0;
-    --padding-debut: 0px;
-    --padding-fin: 40px;
-    animation-name: monter_message;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: steps(1, end);
-}

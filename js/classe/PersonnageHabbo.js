@@ -52,25 +52,6 @@ class PersonnageHabbo extends PixelArt
         let personnageRoot = document.getElementById("habbo_personnage");
         let messageElement = this.bulleMessage();
         messageElement.getElementsByClassName("message")[0].getElementsByTagName("p")[0].innerHTML = "<span>" + this.nom + ": " + "</span>" +  message;
-        //On arrête l'animation de la dernière bulle
-        let listeMessage = personnageRoot.getElementsByClassName("bulle_habbo_root");
-        if (listeMessage.length > 0)
-        {
-            let dernierMessage = listeMessage[listeMessage.length - 1];
-            dernierMessage.style.animationPlayState = "paused";
-            dernierMessage.style.paddingBottom = getComputedStyle(dernierMessage).paddingBottom;
-        }
-        //Gestion de l'incrémentation du padding
-        messageElement.addEventListener("animationiteration", function ()
-        {
-            let iterationCourante = Number(getComputedStyle(messageElement).getPropertyValue('--total-iteration'));
-            iterationCourante++;
-            let paddingDebut = iterationCourante * 40;
-            let paddingFin = paddingDebut + 40;
-            messageElement.style.setProperty('--padding-debut', paddingDebut + "px");
-            messageElement.style.setProperty('--padding-fin', paddingFin + "px");
-            messageElement.style.setProperty('--total-iteration', "" + iterationCourante);
-        });
         personnageRoot.getElementsByClassName("message_liste")[0].appendChild(messageElement);
     }
 }
