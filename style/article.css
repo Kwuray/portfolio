@@ -28,23 +28,12 @@
 {
     from
     {
-        width: 0vw;
-        min-height: 0vh;
-        max-height: 0vh;
-    }
-
-    50%
-    {
-        width: 90vw;
-        min-height: 0.2vh;
-        max-height: 0.2vh;
+        top: 100%;
     }
 
     to
     {
-        width: 50vw;
-        min-height: 90vh;
-        max-height: 90vh;
+        top: 0%;
     }
 }
 
@@ -77,12 +66,11 @@ article
 {
     display: none;
     position: fixed;
-    background-color: white;
+    background-color: rgba(1, 1, 1, 0.2);
     overflow: auto;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
+    width: 100vw;
+    height: 100vh;
 }
 
 article.afficher, article.cacher

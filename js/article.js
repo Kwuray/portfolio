@@ -28,6 +28,10 @@ function initialiserArticles()
 
     articleListe.forEach((value, key) =>
     {
+        value.getElementsByClassName("close")[0].addEventListener("click", function ()
+        {
+            cacherArticle();
+        })
         value.addEventListener("animationend", function ()
         {
             if (value.classList.contains("cacher"))
