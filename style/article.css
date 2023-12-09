@@ -66,11 +66,12 @@ article
 {
     display: none;
     position: fixed;
-    background-color: rgba(1, 1, 1, 0.2);
+    /*background-color: rgba(1, 1, 1, 0.2);*/
     overflow: auto;
     z-index: 1;
     width: 100vw;
     height: 100vh;
+    font-family: habbo_font;
 }
 
 article.afficher, article.cacher
@@ -79,4 +80,61 @@ article.afficher, article.cacher
     animation-name: montrer-article;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+}
+
+article h2
+{
+    text-align: center;
+}
+
+article hr
+{
+    margin-bottom: 30px;
+}
+
+#rectorat-logo
+{
+    max-width: 90px;
+}
+
+#edf-logo
+{
+    max-width: 70px;
+}
+
+#enedis-logo
+{
+    max-width: 140px;
+}
+
+#apiwork-logo
+{
+    max-width: 150px;
+    position: relative;
+    top: 8px;
+}
+
+#auchan-logo
+{
+    max-width: 130px;
+}
+
+.experience_item
+{
+    width: fit-content;
+    align-self: center;
+}
+
+.info.experience
+{
+    max-width: fit-content;
+}
+
+#experience_container
+{
+    display: flex;
+    column-gap: 100px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    margin: 15px;
 }

@@ -99,10 +99,12 @@ class SceneAccueil
                 afficherArticle("presentation");
             })
         }
-        this.personnageHabbo.parler("Bonjour et bienvenue :)");
-        this.personnageHabbo.parler("J'ai réalisé ce portfolio sous forme de \"tableau\" pour montrer ce qui me représente et ce que j'apprécie.");
-        this.personnageHabbo.parler("Cela représente également un défi pour moi car c'est un moyen de me perfectionner en HTML/CSS en utilisant un angle artistique.");
-        this.personnageHabbo.parler("Vous pouvez cliquer sur moi pour en savoir plus sur mon parcours, et mes différents projet. Bonne découverte !");
+        this.personnageHabbo.parler("Bonjour et bienvenue sur mon portfolio :)");
+        this.personnageHabbo.parler("Je m'appelle Nicolas, je suis actuellement en 2e année de BUT Informatique en alternance.")
+        this.personnageHabbo.parler("J'ai repris mes études suite à un bilan de compétences, et j'ai enfin trouvé un domaine qui me passionne.")
+        this.personnageHabbo.parler("J'ai réalisé ce portfolio sous forme de \"tableau\" artistique pour montrer ce qui me représente et ce que j'apprécie.");
+        this.personnageHabbo.parler("C'est également un défi pour moi car c'est un moyen de me perfectionner en HTML/CSS en utilisant un angle différent.");
+        this.personnageHabbo.parler("Vous pouvez cliquer sur mon personnage pour en savoir plus sur mon parcours, et mes différents projets. Bonne découverte !");
         this.dejaInitilise = true;
     }
 }
