@@ -82,6 +82,18 @@ article.afficher, article.cacher
     animation-fill-mode: forwards;
 }
 
+article .close
+{
+    max-width: 30px;
+    position: fixed;
+    margin: 5px;
+}
+
+article .close:hover
+{
+    cursor: pointer;
+}
+
 article h2
 {
     text-align: center;
@@ -119,22 +131,32 @@ article hr
     max-width: 130px;
 }
 
-.experience_item
+#tetris-logo
+{
+    max-width: 100px;
+}
+
+.experience_item, .projet_item
 {
     width: fit-content;
     align-self: center;
 }
 
-.info.experience
+.info.experience, .info.projet
 {
     max-width: fit-content;
 }
 
-#experience_container
+#experience_container, #projet_container
 {
     display: flex;
     column-gap: 100px;
     row-gap: 50px;
     flex-wrap: wrap;
     margin: 15px;
+}
+
+#experiences
+{
+    margin-bottom: 100px;
 }
