@@ -1,384 +1,871 @@
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <link rel="stylesheet" href="style/main.css">
-        <link rel="stylesheet" href="style/personnage.css">
-        <link rel="stylesheet" href="style/article.css">
-        <link rel="stylesheet" href="style/accueil.css">
-        <link rel="stylesheet" href="style/maison.css">
-        <script src="js/classe/Utils.js"></script>
-        <script src="js/classe/DecorElement.js"></script>
-        <script src="js/classe/PixelArt.js"></script>
-        <script src="js/classe/PersonnageHabbo.js"></script>
-        <script src="js/classe/Route.js"></script>
-        <script src="js/classe/SceneAccueil.js"></script>
-        <script src="pixel-art/habbo-personnage.js"></script>
-        <script src="pixel-art/habbo-tete.js"></script>
-        <script src="pixel-art/fleur.js"></script>
-        <script src="pixel-art/herbe.js"></script>
-        <script src="js/article.js"></script>
-        <script src="js/main.js"></script>
-        <title>Portfolio</title>
-    </head>
-    <body>
-        <div data-nom="accueil" class="scene">
-            <div class="mer">
-                <div class="vague"></div>
-                <div class="vague" style="animation-delay: 3s"></div>
-                <span class="info">La mer, le sud, le soleil ! Né à Montpellier, je ne pouvais pas oublier la plage...</span>
-            </div>
-            <div class="sable">
-                <div class="decor">
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                    <div class="serviette">
-                        <div>
-                            <div></div>
-                        </div>
-                        <div></div>
-                    </div>
-                </div>
-                <span class="info">La mer, le sud, le soleil ! Né à Montpellier, je ne pouvais pas oublier la plage...</span>
-            </div>
-            <div class="prairie">
-                <div id="habbo_personnage"></div>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicolas Dagneaux</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/nicolas-dagneaux.jpg" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/nicolas-dagneaux.jpg" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Nicolas Dagneaux">Nicolas Dagneaux</h1>
+
+          <p class="title">Etudiant en BUT informatique</p>
         </div>
-        <div id="ombre"></div>
-        <article data-nom="presentation">
-            <img class="close" src="res/cross-close.svg"></img>
-            <section id="experiences">
-                <h2>Expériences professionnelles</h2>
-                <hr>
-                <div id="experience_container">
-                    <div class="experience_item">
-                        <img id="rectorat-logo" src="res/rectorat-lille.png" alt="Logo Rectorat de Lille">
-                        <span class="info experience">
-                            <h3>DRASI - Développeur logiciel en alternance</h3>
-                            <ul>
-                                <li>Développement d'application WEB (PHP)</li>
-                                <li>Migration d'applications</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="experience_item">
-                        <img id="edf-logo" src="res/edf.png" alt="Logo EDF">
-                        <span class="info experience">
-                            <h3>EDF - Chargé de facturation (Intérim)</h3>
-                            <ul>
-                                <li>Facturation grands comptes</li>
-                                <li>Création de 2 applications d'automatisation de processus</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="experience_item">
-                        <img id="enedis-logo" src="res/enedis.png" alt="Logo Enedis">
-                        <span class="info experience">
-                            <h3>ENEDIS - Chargé de réclamation (Intérim)</h3>
-                            <ul>
-                                <li>Gestion des réclamations</li>
-                                <li>Automatisation de création de ticket de support via API</li>
-                                <li>Création de tableaux de bords</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="experience_item">
-                        <img id="apiwork-logo" src="res/apiwork.png" alt="Logo Apiwork">
-                        <span class="info experience">
-                            <h3>Apiwork - Consultant Proptech</h3>
-                            <ul>
-                                <li>Commercialisation d'un logiciel immobilier</li>
-                                <li>Gestion en autonomie d'un périmètre prospects/clients</li>
-                                <li>Prospection téléphonique et terrain</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="experience_item">
-                        <img id="auchan-logo" src="res/auchan-drive.png" alt="Logo Auchan Drive">
-                        <span class="info experience">
-                            <h3>Auchan Drive - Coordonateur d'équipe en alternance</h3>
-                            <ul>
-                                <li>Optimisation d'implémentation produits</li>
-                                <li>Pilotage d'activité</li>
-                                <li>Formation des nouveaux salariés</li>
-                            </ul>
-                        </span>
-                    </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:dagneaux.nicolas@icloud.com" class="contact-link">dagneaux.nicolas@icloud.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item" style="display: none">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Âge</p>
+
+              <time datetime="1982-06-23">26 ans</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Lieux de résidence</p>
+
+              <address>Lille</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/nicolasdag" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>A propos de moi</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Mon parcours</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projets</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="a propos de moi">
+
+        <header>
+          <h2 class="h2 article-title">A propos de moi</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Actuellement en 2e année de BUT Informatique en alternance, j'ai repris mes études suite à un bilan de compétences.
+            Je suis cette formation en apprentissage, auprès du Rectorat de Lille dans l'équipe de développement d'applications web.
+          </p>
+
+          <p>
+            J'ai toujours été très intéressé par l'informatique, et j'ai découvert le développement il y a quelques années.
+            Depuis, cela me passionne de plus en plus, et je prends plaisir à en apprendre davantage et découvrir toujours plus.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Ce que j'aime</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Développement informatique</h4>
+
+                <p class="service-item-text">
+                  Développeur "back-end", je pratique aussi cette activité sur des projets personnels ou via des challenges (Root-me, Advent of code...)
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-squash.svg" alt="sport icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Sport</h4>
+
+                <p class="service-item-text">
+                  J'adore le sport, plus particulièrement le badminton et le squash que je pratique chaque semaines.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-pastry.svg" alt="pastry icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Patisserie & cuisine</h4>
+
+                <p class="service-item-text">
+                  J'adore cuisiner, surtout des pâtisseries !
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials" style="display: none">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
                 </div>
-            </section>
-            <section id="projet">
-                <h2>Projets informatiques</h2>
-                <hr>
-                <div id="projet_container">
-                    <div class="projet_item">
-                        <a href="https://gitlab.univ-lille.fr/2023-projet-agile-de-rentree/groupe-2" target="_blank">
-                            <img id="tetris-logo" src="res/tetris.png" alt="Logo Tetris">
-                        </a>
-                        <span class="info projet">
-                            <h3>Projet de S3 BUT Informatique - Tetris</h3>
-                            <p>Ce projet consistait à créer un jeu en ligne de commande en Java.</p>
-                            <p>Nous étions en équipe de 5 en mode agile, et avons choisi de recréer le classique "Tetris" !</p>
-                            <p>Le développement de ce jeu s'est déroulé dès la rentrée du 3e semestre.</p>
-                            <p>Nous avons dû respecter les principes agiles : User stories, sprints, rétrospectives...</p>
-                        </span>
-                    </div>
-                    <div class="projet_item">
-                        <img id="edf-logo" src="res/edf.png" alt="Logo EDF">
-                        <span class="info projet">
-                            <h3>Automatisation récupération de factures en ligne</h3>
-                            <p>Imaginez que vous devez récupérer plusieurs factures en utilisant 30 identifiants différents tous les mois...</p>
-                            <p>C'est ce que je devais parfois faire, lors de ma mission chez EDF.</p>
-                            <p>J'ai donc mis en place un système automatisé de récupération de factures.</p>
-                            <p>Développé en Javascript, cet outil permettait à partir d'une liste de login et numéros de factures de récupérer ces dernieres en quelques secondes.</p>
-                        </span>
-                    </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
                 </div>
-            </section>
-        </article>
-    <div class="test"></div>
-    </body>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients" style="display: none">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="mon parcours">
+
+        <header>
+          <h2 class="h2 article-title">Mon parcours</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3"></h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Développeur en alternance (DRASI - Rectorat Lille)</h4>
+
+              <span>Sept. 23 —</span>
+
+              <p class="timeline-text">
+                Développement d'application web en PHP
+                euh
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">BUT Informatique - Université de Lille</h4>
+
+              <span>Sept. 22 —</span>
+
+              <p class="timeline-text">Apprentissage de la programmation orienté objet avec Java</p>
+              <p class="timeline-text">SQL, Bash, C, HTML/CSS, Git, gestion de projets</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Chargé de facturation grands comptes, EDF - mission intérim</h4>
+
+              <span>Jan. 21 — Sept. 21</span>
+
+              <p class="timeline-text">Facturation de grands clients</p>
+              <p class="timeline-text">Création d'un outil de récupération automatique de factures</p>
+              <p class="timeline-text">Création d'un outil d'automatisation de facturation en VBA</p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Consultant Proptech, Apiwork - CDI</h4>
+
+              <span>Jan. 20 — Oct. 20</span>
+
+              <p class="timeline-text">Commercialisation d'un logiciel immobilier</p>
+              <p class="timeline-text">Gestion en autonomie d'un périmètre de prospects/clients</p>
+              <p class="timeline-text">Prospection téléphonique et terrain</p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Compétences techniques</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Programmation Orientée Objets : </h5>
+                <p class="timeline-text">Héritage, polymorphisme, interfaces, designs patterns, avec notamment Java et C++</p>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Bases de données relationnelles : </h5>
+                <p class="timeline-text">MCD, MLD, PostgreSQL, MySQL, JDBC</p>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Programmation système : </h5>
+                <p class="timeline-text">Bash, C, openssh</p>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Autres langages connus</h5>
+                <p class="timeline-text">PHP, VBA, HTML, CSS</p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section><br><br>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Qualités personnelles</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Personnalité : </h5>
+                <p class="timeline-text">Goût pour l'inconnu, ouvert d'esprit, calme, curieux</p>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Compétences personnelles : </h5>
+                <p class="timeline-text">Adaptabilité, organisation, autonomie, polyvalence</p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="projets">
+
+        <header>
+          <h2 class="h2 article-title">Projets</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Tous</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Scolaires</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Professionnels</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Personnels</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Sélectionnez une catégorie</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>Tous</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Scolaires</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Professionnels</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Personnels</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="Scolaires">
+              <a href="#" data-project-link="blocks">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/blocks.png" alt="blocks" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">BLOCKS</h3>
+
+                <p class="project-category">Scolaire</p>
+
+              </a>
+              <article class="project" data-project-article="blocks">
+                <p>Ce projet s'est déroulé lors de la 1ere semaine de rentrée de 2e année de BUT, en septembre 2023</p>
+                <p>Cela consistait à créer un jeu dans un terminal. Nous avons choisi de créer un jeu type "Tetris".</p>
+                <p>Le jeu a été réalisé en Java, sous un environnement Linux.</p><br>
+                <h5>Ce que j'ai réalisé : </h5>
+                <ul>
+                  <li>Travail en équipe dans le cadre d'un projet agile</li>
+                  <li>Multithreading pour enregistrer les touches clavier</li>
+                  <li>Gestion du déplacement des pièces (rotation, chute, décalage...)</li>
+                </ul><br>
+                <h5>Compétences acquises : </h5>
+                <ul>
+                  <li>Savoir travailler dans le cadre d'un projet agile</li>
+                  <li>Travail colaboratif avec git</li>
+                </ul><br>
+                <a href="https://gitlab.univ-lille.fr/2023-projet-agile-de-rentree/groupe-2">
+                  <img src="./assets/images/icon-github.svg" alt="sport icon" width="40">
+                  Lien vers dépôt git
+                </a>
+              </article>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Scolaires">
+              <a href="#" data-project-link="echange-scolaire">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/gestion-echanges-2.png" alt="gestion échanges" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Plateforme d'échange linguistiques</h3>
+
+                <p class="project-category">Scolaire</p>
+
+              </a>
+              <article class="project" data-project-article="echange-scolaire">
+                <p>Ce projet a clôturé notre 1ere année de BUT Informatique</p>
+                <p>Cela consistait à créer une application graphique pour gérer l'échange linguistiques entre plusieurs élèves.</p>
+                <p>Nous devions générer des paires d'élèves compatibles (régime alimentaire, allergies...)</p>
+                <p>Le jeu a été réalisé en Java, sous un environnement Linux.</p><br>
+                <h5>Ce que j'ai réalisé : </h5>
+                <ul>
+                  <li>Travail en équipe</li>
+                  <li>Réalisation de l'Interface Humain Machine en JavaFX</li>
+                  <li>Modélisation de l'UML de l'ensemble des objets de l'application</li>
+                </ul><br>
+                <h5>Compétences acquises : </h5>
+                <ul>
+                  <li>Savoir travailler en équipe</li>
+                  <li>Travail colaboratif avec git</li>
+                  <li>Réalisation d'une interface graphique avec JavaFX</li>
+                </ul><br>
+                <a href="https://gitlab.univ-lille.fr/sae2.01-2.02/2023/D1">
+                  <img src="./assets/images/icon-github.svg" alt="sport icon" width="40">
+                  Lien vers dépôt git
+                </a>
+              </article>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Personnels">
+              <a href="#" data-project-link="aoc">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/aoc-2023.jpeg" alt="blocks" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Advent Of Code 2023</h3>
+
+                <p class="project-category">Personnel</p>
+
+              </a>
+              <article class="project" data-project-article="aoc">
+                <p>"Advent Of Code" est un calendrier un peu particulier ! En effet, chaque jour, un nouveau puzzle algorithmique est dévoilé, et il faut le résoudre !</p><br>
+                <p>Il s'agit de ma première participation. J'ai décidé de réaliser l'ensemble des défis avec le langage C, pour gagner en compétences sur ce langage.</p><br>
+                <a href="https://gitlab.univ-lille.fr/nicolas.dagneaux.etu/advent-of-code-2023">
+                  <img src="./assets/images/icon-github.svg" alt="sport icon" width="40">
+                  Lien vers dépôt git
+                </a>
+              </article>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Lille+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Formulaire de contact</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Nom" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Adresse e-mail" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Votre message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Envoyer</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>

@@ -104,7 +104,11 @@ class SceneAccueil
         this.personnageHabbo.parler("J'ai repris mes études suite à un bilan de compétences, et j'ai enfin trouvé un domaine qui me passionne.")
         this.personnageHabbo.parler("J'ai réalisé ce portfolio sous forme de \"tableau\" artistique pour montrer ce qui me représente et ce que j'apprécie.");
         this.personnageHabbo.parler("C'est également un défi pour moi car c'est un moyen de me perfectionner en HTML/CSS en utilisant un angle différent.");
+<<<<<<< HEAD:js/classe/SceneAccueil.js
         this.personnageHabbo.parler("Vous pouvez cliquer sur mon personnage pour en savoir plus sur mon parcours, et mes différents projets. Bonne découverte !");
+=======
+        this.personnageHabbo.parler("Vous pouvez cliquer sur mon personnage pour en savoir plus sur mon parcours, et mes différents projet. Bonne découverte !");
+>>>>>>> a69d2e7 (portfolio pour presentation):game/js/classe/SceneAccueil.js
         this.dejaInitilise = true;
     }
 }

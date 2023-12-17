@@ -53,3 +53,11 @@ body
     z-index: 1;
 }
 
+<<<<<<< HEAD:style/main.css
+=======
+hr.solid
+{
+    border-top: solid black 1px;
+}
+
+>>>>>>> a69d2e7 (portfolio pour presentation):game/style/main.css

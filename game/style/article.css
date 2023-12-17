@@ -82,6 +82,7 @@ article.afficher, article.cacher
     animation-fill-mode: forwards;
 }
 
+<<<<<<< HEAD:style/article.css
 article .close
 {
     max-width: 30px;
@@ -94,6 +95,8 @@ article .close:hover
     cursor: pointer;
 }
 
+=======
+>>>>>>> a69d2e7 (portfolio pour presentation):game/style/article.css
 article h2
 {
     text-align: center;
@@ -101,6 +104,7 @@ article h2
 
 article hr
 {
+<<<<<<< HEAD:style/article.css
     margin-bottom: 30px;
 }
 
@@ -110,10 +114,17 @@ article hr
 }
 
 #edf-logo
+=======
+    width: 92%;
+}
+
+article img
+>>>>>>> a69d2e7 (portfolio pour presentation):game/style/article.css
 {
     max-width: 70px;
 }
 
+<<<<<<< HEAD:style/article.css
 #enedis-logo
 {
     max-width: 140px;
@@ -143,20 +154,35 @@ article hr
 }
 
 .info.experience, .info.projet
+=======
+.experience_item
+{
+    width: fit-content;
+}
+
+.info.experience
+>>>>>>> a69d2e7 (portfolio pour presentation):game/style/article.css
 {
     max-width: fit-content;
 }
 
+<<<<<<< HEAD:style/article.css
 #experience_container, #projet_container
+=======
+#experience_container
+>>>>>>> a69d2e7 (portfolio pour presentation):game/style/article.css
 {
     display: flex;
     column-gap: 100px;
     row-gap: 50px;
     flex-wrap: wrap;
     margin: 15px;
+<<<<<<< HEAD:style/article.css
 }
 
 #experiences
 {
     margin-bottom: 100px;
+=======
+>>>>>>> a69d2e7 (portfolio pour presentation):game/style/article.css
 }
